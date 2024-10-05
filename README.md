@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+# Design
+
+## Sequence Diagram 
+<div align="center">
+<img src="![SequenceDiagram](https://github.com/user-attachments/assets/d17c61ec-bf60-4569-9ef3-da76b31878b3)" width="700px" />
+</div>
+
