@@ -1,1 +1,6 @@
-<p>patient-select works!</p>
+<h2>Select a Patient</h2>
+<ul>
+  <li *ngFor="let patient of patients">
+    <button (click)="selectPatient(patient.id)">{{ patient.name }}</button>
+  </li>
+</ul>
