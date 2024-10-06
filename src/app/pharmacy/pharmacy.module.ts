@@ -5,7 +5,6 @@ import { AppComponent } from '../app.component';
 import { PatientSelectComponent } from './patient-select/patient-select.component';
 import { PharmacyRoutingModule } from './pharmacy-routing.module';
 import { PrescriptionListComponent } from './prescription-list/prescription-list.component';
-import { PrescriptionDetailComponent } from './prescription-detail/prescription-detail.component';
 
 @NgModule({
   imports: [
@@ -14,10 +13,8 @@ import { PrescriptionDetailComponent } from './prescription-detail/prescription-
     PharmacyRoutingModule,
     PatientSelectComponent, 
     PrescriptionListComponent, 
-    PrescriptionDetailComponent, 
     AppComponent
   ],
   providers: [],
-  //bootstrap: [AppComponent]
 })
 export class PharmacyModule { }

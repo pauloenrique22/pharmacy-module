@@ -1,8 +1,9 @@
 <h2>Prescriptions</h2>
 <ul>
   <li *ngFor="let prescription of prescriptions">
-    <button (click)="viewPrescriptionDetails(prescription.id)">
-      {{ prescription.doctor }}: {{ prescription.drugs.join(', ') }}
-    </button>
+    {{prescription.patient_id}} : {{prescription.date_prescriptions}}
+    <!-- <button (click)="viewPrescriptionDetails(prescription.id)">
+      {{ prescription.doctor_id }}: {{ prescription.date_prescriptions }}
+    </button> -->
   </li>
 </ul>

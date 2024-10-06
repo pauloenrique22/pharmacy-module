@@ -1,0 +1,31 @@
+{
+    "patients": [
+        { "id": 1, "name": "John Doe", "age": 30 },
+        { "id": 2, "name": "Jane Smith", "age": 25 },
+        { "id": 3, "name": "Alice Johnson", "age": 40 },
+        { "id": 4, "name": "Bob Brown", "age": 50 },
+        { "id": 5, "name": "Charlie White", "age": 60 },
+        { "id": 6, "name": "Paulo Enrique", "age": 35 }
+        ],
+    "doctors": [
+        { "id": 1, "name": "Dr. John Doe", "specialty": "General Physician" },
+        { "id": 2, "name": "Dr. Jane Smith", "specialty": "Dermatologist" },
+        { "id": 3, "name": "Dr. Alice Johnson", "specialty": "Cardiologist" },
+        { "id": 4, "name": "Dr. Bob Brown", "specialty": "Neurologist" },
+        { "id": 5, "name": "Dr. Charlie White", "specialty": "Orthopedic Surgeon" }
+        ],
+    "prescriptions": [
+        { "id": 1, "patient_id": 1, "doctor_id": 1, "date_prescriptions" : "2021-01-01"},
+        { "id": 2, "patient_id": 1, "doctor_id": 2, "date_prescriptions" : "2022-01-01"},
+        { "id": 3, "patient_id": 6, "doctor_id": 3, "date_prescriptions" : "2023-01-01"},
+        { "id": 4, "patient_id": 2, "doctor_id": 4, "date_prescriptions" : "2024-01-01"},
+        { "id": 5, "patient_id": 3, "doctor_id": 5, "date_prescriptions" : "2025-01-01" }
+    ], 
+    "prescriptions-detail": [
+        { "id": 1, "prescriptions_id": 1, "medication": "Paracetamol", "dosage": "500mg", "frequency": "3 times a day" },
+        { "id": 2, "prescriptions_id": 1, "medication": "Ibuprofen", "dosage": "400mg", "frequency": "2 times a day" },
+        { "id": 3, "prescriptions_id": 2, "medication": "Aspirin", "dosage": "300mg", "frequency": "1 time a day" },
+        {  "id": 4, "prescriptions_id": 6, "medication": "Amoxicillin", "dosage": "250mg", "frequency": "3 times a day" },
+        {  "id": 5, "prescriptions_id": 3, "medication": "Ciprofloxacin", "dosage": "500mg", "frequency": "2 times a day" }
+    ]    
+}

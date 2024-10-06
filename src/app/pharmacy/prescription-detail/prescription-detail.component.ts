@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PharmacyService } from '../pharmacy.service';
+import { PrescriptionDetails } from './prescription-detail';
 
 @Component({
   selector: 'app-prescription-detail',
@@ -11,13 +12,17 @@ import { PharmacyService } from '../pharmacy.service';
   styleUrl: './prescription-detail.component.css'
 })
 export class PrescriptionDetailComponent implements OnInit{
-  prescriptionDetails: any;
-
+  
+  prescriptionDetails: PrescriptionDetails[] = [];
   constructor(private pharmacyService: PharmacyService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const prescriptionId = +this.route.snapshot.paramMap.get('prescriptionId')!;
-    this.pharmacyService.getPrescriptionDetails(prescriptionId).subscribe(data => this.prescriptionDetails = data);
+    const prescriptionId = Number(this.route.snapshot.paramMap.get('prescriptionId'));
+    this.pharmacyService.getPrescriptionDetails(prescriptionId).subscribe((prescriptionDetails) => {
+      this.prescriptionDetails = prescriptionDetails;
+    });
   }
+
+  
 
 }
