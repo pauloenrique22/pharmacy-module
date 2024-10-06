@@ -12,13 +12,9 @@ import { PharmacyService } from '../pharmacy.service';
   styleUrl: './patient-select.component.css'
 })
 export class PatientSelectComponent implements OnInit {
-  patients: any[] = [
-    { id: 1, name: 'John Doe', age: 30 },
-    { id: 2, name: 'Jane Smith', age: 25 },
-    { id: 3, name: 'Alice Johnson', age: 40 },
-    { id: 4, name: 'Bob Brown', age: 50 },
-    { id: 5, name: 'Charlie White', age: 60 }
-  ];
+  patients: any[] = [];
+
+  selectedPatients: Set<number> = new Set(); // Conjunto para manter os IDs dos pacientes selecionados
 
   constructor(private pharmacyService: PharmacyService, private router: Router) {}
 
@@ -26,8 +22,22 @@ export class PatientSelectComponent implements OnInit {
     this.pharmacyService.getPatients().subscribe(data => this.patients = data);
   }
 
+  // selectPatient(patientId: number): void {
+  //   this.router.navigate(['/pharmacy/prescriptions', patientId]);
+  // }
   selectPatient(patientId: number): void {
+    // Alterna a seleção do paciente
+    // if (this.selectedPatients.has(patientId)) {
+    //   this.selectedPatients.delete(patientId); // Desmarcar se já estiver selecionado
+    // } else {
+    //   this.selectedPatients.add(patientId); // Marcar se não estiver selecionado
+    // }
     this.router.navigate(['/pharmacy/prescriptions', patientId]);
+  }
+
+  // Método para obter os IDs dos pacientes selecionados
+  getSelectedPatients(): number[] {
+    return Array.from(this.selectedPatients);
   }
 
 }

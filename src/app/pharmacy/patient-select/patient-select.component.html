@@ -1,6 +1,20 @@
 <h2>Select a Patient</h2>
 <ul>
-  <li *ngFor="let patient of patients">
+  <!-- <li *ngFor="let patient of patients">
     <button (click)="selectPatient(patient.id)">{{ patient.name }}</button>
+  </li> -->
+  <!-- <li *ngFor="let patient of patients" (click)="selectPatient(patient.id)">
+    {{ patient.name }} ({{ patient.age }} anos)
+  </li> -->
+  <li *ngFor="let patient of patients">
+    <label>
+      <input
+        type="checkbox"
+        [checked]="selectedPatients.has(patient.id)"
+        (change)="selectPatient(patient.id)"
+      />
+      {{ patient.name }} ({{ patient.age }} anos)
+    </label>
   </li>
 </ul>
+<button (click)="getSelectedPatients()">Confirm Selection</button>
