@@ -13,11 +13,10 @@ import { PrescriptionDetailComponent } from './prescription-detail/prescription-
     CommonModule,
     PharmacyRoutingModule,
     PatientSelectComponent, 
-    PrescriptionListComponent, 
-    PrescriptionDetailComponent, 
+    PrescriptionListComponent,
+    PrescriptionDetailComponent,
     AppComponent
   ],
   providers: [],
-  //bootstrap: [AppComponent]
 })
 export class PharmacyModule { }

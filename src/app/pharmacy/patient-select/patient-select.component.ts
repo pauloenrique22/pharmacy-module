@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PharmacyService } from '../pharmacy.service';
+import { Patient } from './patient';
 
 
 @Component({
@@ -12,32 +13,18 @@ import { PharmacyService } from '../pharmacy.service';
   styleUrl: './patient-select.component.css'
 })
 export class PatientSelectComponent implements OnInit {
-  patients: any[] = [];
-
-  selectedPatients: Set<number> = new Set(); // Conjunto para manter os IDs dos pacientes selecionados
-
-  constructor(private pharmacyService: PharmacyService, private router: Router) {}
+  
+  patients: Patient[] = [];
+  constructor(private pharmacyService: PharmacyService, private router: Router) { }
 
   ngOnInit(): void {
-    this.pharmacyService.getPatients().subscribe(data => this.patients = data);
+    this.pharmacyService.getPatients().subscribe((patients) => {
+      this.patients = patients;
+    });
   }
-
-  // selectPatient(patientId: number): void {
-  //   this.router.navigate(['/pharmacy/prescriptions', patientId]);
-  // }
+  
   selectPatient(patientId: number): void {
-    // Alterna a seleção do paciente
-    // if (this.selectedPatients.has(patientId)) {
-    //   this.selectedPatients.delete(patientId); // Desmarcar se já estiver selecionado
-    // } else {
-    //   this.selectedPatients.add(patientId); // Marcar se não estiver selecionado
-    // }
-    this.router.navigate(['/pharmacy/prescriptions', patientId]);
+    this.router.navigate(['/prescriptions', patientId]);
   }
-
-  // Método para obter os IDs dos pacientes selecionados
-  getSelectedPatients(): number[] {
-    return Array.from(this.selectedPatients);
-  }
-
+ 
 }
