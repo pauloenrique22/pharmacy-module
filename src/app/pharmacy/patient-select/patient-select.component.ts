@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { PharmacyService } from '../pharmacy.service';
 
 
 @Component({
   selector: 'app-patient-select',
-  //standalone: true,
-  //imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './patient-select.component.html',
   styleUrl: './patient-select.component.css'
 })

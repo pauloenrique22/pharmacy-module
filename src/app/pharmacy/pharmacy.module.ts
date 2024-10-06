@@ -7,16 +7,13 @@ import { PharmacyRoutingModule } from './pharmacy-routing.module';
 
 
 @NgModule({
-  declarations: [
-    PatientSelectComponent
-  ],
   imports: [
     BrowserModule,
     CommonModule,
+    PatientSelectComponent,
     PharmacyRoutingModule,
     AppComponent
   ],
   providers: []
-  // bootstrap: [AppComponent]
 })
 export class PharmacyModule { }

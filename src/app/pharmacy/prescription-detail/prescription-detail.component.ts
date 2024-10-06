@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { PharmacyService } from '../pharmacy.service';
 
 @Component({
   selector: 'app-prescription-detail',
-  //standalone: true,
-  //imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './prescription-detail.component.html',
   styleUrl: './prescription-detail.component.css'
 })
