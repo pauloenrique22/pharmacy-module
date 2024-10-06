@@ -8,7 +8,14 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 
 ## JSON Server
 
-This project uses [JSON Server](https://github.com/typicode/json-server) to provide a full fake REST API. To start the JSON Server, run:
+This project uses [JSON Server](https://github.com/typicode/json-server) to provide a full fake REST API. 
+
+### Install Json Server
+```bash
+npm install json-server
+```
+
+### To start the JSON Server, run:
 ```bash
 json-server db.json
 ```
