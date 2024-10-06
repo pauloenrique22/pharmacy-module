@@ -14,13 +14,19 @@ import { PrescriptionDetails } from './prescription-detail';
 export class PrescriptionDetailComponent implements OnInit{
   
   prescriptionDetails: PrescriptionDetails[] = [];
+  prescriptionId: number = 0;
+
   constructor(private pharmacyService: PharmacyService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    const prescriptionId = Number(this.route.snapshot.paramMap.get('prescriptionId'));
-    this.pharmacyService.getPrescriptionDetails(prescriptionId).subscribe((prescriptionDetails) => {
-      this.prescriptionDetails = prescriptionDetails;
-    });
+    debugger;
+    this.route.paramMap.subscribe(params => {
+      this.prescriptionId = +params.get('prescriptionId')!;
+      this.pharmacyService.getPrescriptionDetails(this.prescriptionId).subscribe((prescriptionDetails) => {
+        this.prescriptionDetails = prescriptionDetails;
+        console.log(this.prescriptionDetails);
+      });
+    }); 
   }
 
   

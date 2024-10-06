@@ -21,7 +21,7 @@
         { "id": 4, "patient_id": 2, "doctor_id": 4, "date_prescriptions" : "2024-01-01"},
         { "id": 5, "patient_id": 3, "doctor_id": 5, "date_prescriptions" : "2025-01-01" }
     ], 
-    "prescriptions-detail": [
+    "prescription-details": [
         { "id": 1, "prescriptions_id": 1, "medication": "Paracetamol", "dosage": "500mg", "frequency": "3 times a day" },
         { "id": 2, "prescriptions_id": 1, "medication": "Ibuprofen", "dosage": "400mg", "frequency": "2 times a day" },
         { "id": 3, "prescriptions_id": 2, "medication": "Aspirin", "dosage": "300mg", "frequency": "1 time a day" },

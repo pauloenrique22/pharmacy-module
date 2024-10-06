@@ -1,5 +1,8 @@
 <h2>List of Patients</h2>
-<ul>
+<div *ngIf="patients.length === 0">
+  No Patient found.
+</div>
+<ul *ngIf="patients.length > 0">
   <li *ngFor="let patient of patients">
     <button (click)="selectPatient(patient.id)">
       {{ patient.name }}

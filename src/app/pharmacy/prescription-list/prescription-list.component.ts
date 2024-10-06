@@ -16,18 +16,21 @@ export class PrescriptionListComponent implements OnInit {
   prescriptions: Prescription[] = [];
   patientId: number = 0;
 
-  constructor(private pharmacyService: PharmacyService, private route: ActivatedRoute) { }
+  constructor(private pharmacyService: PharmacyService, private router: Router, private route: ActivatedRoute) { }
 
 
   ngOnInit(): void {
-    debugger
+    //debugger
     this.route.paramMap.subscribe(params => {
       this.patientId = +params.get('patientId')!;
       this.pharmacyService.getPrescriptionsByPatient(this.patientId).subscribe((prescriptions) => {
         this.prescriptions = prescriptions;
-        console.log(this.prescriptions);
       });
     });
+  }
+
+  viewPrescriptionDetails(prescriptionId: number) {
+    this.router.navigate(['/prescription-details', prescriptionId]);
   }
 
 }

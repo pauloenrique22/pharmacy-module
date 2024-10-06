@@ -8,6 +8,6 @@ import { PrescriptionDetailComponent } from './pharmacy/prescription-detail/pres
 export const routes: Routes = [
   { path: 'select-patient', component: PatientSelectComponent },
   { path: 'prescriptions/:patientId', component: PrescriptionListComponent },
-  { path: 'prescription/:id', component: PrescriptionDetailComponent },
+  { path: 'prescription-details/:prescriptionId', component: PrescriptionDetailComponent },
   { path: '', redirectTo: '/select-patient', pathMatch: 'full' } 
 ];

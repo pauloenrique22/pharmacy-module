@@ -1,9 +1,20 @@
 <h2>Prescriptions</h2>
-<ul>
+<div *ngIf="prescriptions.length === 0">
+  No prescriptions found for this patient.
+</div>
+<ul *ngIf="prescriptions.length > 0">
   <li *ngFor="let prescription of prescriptions">
-    {{prescription.patient_id}} : {{prescription.date_prescriptions}}
-    <!-- <button (click)="viewPrescriptionDetails(prescription.id)">
-      {{ prescription.doctor_id }}: {{ prescription.date_prescriptions }}
-    </button> -->
+    <div>
+      <button (click)="viewPrescriptionDetails(prescription.id)">
+        Prescription: {{ prescription.doctor_id }}
+      </button> 
+    </div>
+    <div>
+      <strong>Date:</strong> {{ prescription.date_prescriptions }}
+    </div>
+    <div>
+      <strong>Doctor:</strong> {{ prescription.doctor?.name }} ({{ prescription.doctor?.specialty }})
+    </div>
+    <br>
   </li>
 </ul>
