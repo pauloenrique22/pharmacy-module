@@ -25,10 +25,11 @@
 .header .logo {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .header .logo img {
-    width: 60px; 
+    width: 30%; 
 }
 
 .header .menu,
