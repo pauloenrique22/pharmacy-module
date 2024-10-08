@@ -6,6 +6,12 @@
     padding: 2rem;
 }
 
+.no-patient {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 2rem;
+}
 .card {
     width: 18rem;
     border-radius: 1rem;
