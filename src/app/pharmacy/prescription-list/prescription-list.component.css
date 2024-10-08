@@ -1,0 +1,86 @@
+.prescription-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra suave */
+    margin-bottom: 2rem;
+  }
+  
+.prescription-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  
+  .prescription-card {
+    background: linear-gradient(180deg, rgba(0, 123, 255, 0.5), rgba(0, 56, 180, 0.5));
+    border-radius: 0.75rem;
+    padding: 1rem;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 70%;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .prescription-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+  .prescription-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .prescription-card__button {
+    background-color: rgba(7, 13, 104, 0.781);
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: left;
+    width: fit-content;
+  }
+  
+  .prescription-card__button:hover {
+    background-color: rgb(212, 89, 137);
+  }
+  
+  .prescription-card__details p {
+    margin: 0.30rem 0;
+    font-size: 0.9rem;
+  }
+
+  
+/* Estilo para el contenedor de la barra de búsqueda */
+.search-container {
+    margin-bottom: 2rem; 
+    text-align: center; 
+  }
+  
+  .search-bar {
+    width: 40%; 
+    padding: 0.75rem; 
+    border: 2px solid #007BFF;
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
+    outline: none;
+    transition: border-color 0.3s ease; 
+  }
+  
+  .search-bar:focus {
+    border-color: #032a53; 
+  }
+  
+  .search-bar:hover {
+    box-shadow: 0px 0px 5px rgba(1, 29, 59, 0.5); 
+  }
+  

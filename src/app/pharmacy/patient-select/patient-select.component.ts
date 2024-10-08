@@ -5,6 +5,7 @@ import { PharmacyService } from '../pharmacy.service';
 import { Patient } from './patient';
 
 
+
 @Component({
   selector: 'app-patient-select',
   standalone: true,
@@ -17,6 +18,8 @@ export class PatientSelectComponent implements OnInit {
   patients: Patient[] = [];
   constructor(private pharmacyService: PharmacyService, private router: Router) { }
 
+
+
   ngOnInit(): void {
     this.pharmacyService.getPatients().subscribe((patients) => {
       this.patients = patients;
@@ -26,5 +29,7 @@ export class PatientSelectComponent implements OnInit {
   selectPatient(patientId: number): void {
     this.router.navigate(['/prescriptions', patientId]);
   }
+
+
  
 }

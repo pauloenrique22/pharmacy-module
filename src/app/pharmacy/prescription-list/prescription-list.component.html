@@ -1,4 +1,4 @@
-<h2>Prescriptions</h2>
+<!--<h2>Prescriptions</h2>
 <div *ngIf="prescriptions.length === 0">
   No prescriptions found for this patient.
 </div>
@@ -17,4 +17,32 @@
     </div>
     <br>
   </li>
-</ul>
+</ul>-->
+
+
+<h2 class="prescription-title">Prescriptions</h2>
+
+
+<!-- Barra de búsqueda -->
+<div class="search-container">
+  <input type="text" class="search-bar" placeholder="Search for a prescription">
+</div>
+
+<div *ngIf="prescriptions.length === 0">
+  No prescriptions found for this patient.
+</div>
+
+<!-- Contenedor de los Prescription  -->
+<div class="prescription-card-container" *ngIf="prescriptions.length > 0">
+  <div class="prescription-card" *ngFor="let prescription of prescriptions">
+    <div class="prescription-card__content">
+      <button class="prescription-card__button" (click)="viewPrescriptionDetails(prescription.id)">
+        View Prescription: {{ prescription.doctor_id }}
+      </button>
+      <div class="prescription-card__details">
+        <p><strong>Date:</strong> {{ prescription.date_prescriptions }}</p>
+        <p><strong>Doctor:</strong> {{ prescription.doctor?.name }} ({{ prescription.doctor?.specialty }})</p>
+      </div>
+    </div>
+  </div>
+</div>

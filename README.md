@@ -17,7 +17,7 @@ npm install json-server
 
 ### To start the JSON Server, run:
 ```bash
-json-server db.json
+npx json-server db.json
 ```
 By default, the JSON Server will run on http://localhost:3000/
 

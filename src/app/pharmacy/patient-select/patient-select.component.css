@@ -1,0 +1,84 @@
+.patient-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.card {
+    width: 18rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: rgba(249, 249, 249, 0.8); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    margin-bottom: 1rem;
+}
+
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); 
+}
+
+.card__content {
+    padding: 1.5rem;
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card__button {
+    padding: 0.75em 1.5em;
+    border-radius: 0.5rem;
+    background-color: #007BFF; 
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.card__button:hover {
+    background-color: #0056b3; 
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem; 
+    color: white; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 1.5rem; 
+}
+
+/* Estilo para el contenedor de la barra de búsqueda */
+.search-container {
+    margin-bottom: 2rem; 
+    text-align: center; 
+  }
+  
+  .search-bar {
+    width: 40%; 
+    padding: 0.75rem; 
+    border: 2px solid #007BFF;
+    border-radius: 0.5rem; 
+    font-size: 1rem; 
+    outline: none;
+    transition: border-color 0.3s ease; 
+  }
+  
+  .search-bar:focus {
+    border-color: #032a53; 
+  }
+  
+  .search-bar:hover {
+    box-shadow: 0px 0px 5px rgba(1, 29, 59, 0.5); 
+  }
+  
+  

@@ -43,6 +43,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  
 
   h1 {
     font-size: 3.125rem;
@@ -177,17 +178,16 @@
   }
 </style>
 
-<main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-      <router-outlet></router-outlet>
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
+<header class="header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Pharmacie Module">
   </div>
-</main>
+</header>
 
+<!-- Main Content -->
+<main class="content">
+
+</main>
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
@@ -195,6 +195,7 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
 
 
 <router-outlet />
