@@ -19,7 +19,7 @@ export class PrescriptionDetailComponent implements OnInit{
   constructor(private pharmacyService: PharmacyService, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    //debugger;
+    debugger;
     this.route.paramMap.subscribe(params => {
       this.prescriptionId = +params.get('prescriptionId')!;
       this.pharmacyService.getPrescriptionDetails(this.prescriptionId).subscribe((prescriptionDetails) => {
