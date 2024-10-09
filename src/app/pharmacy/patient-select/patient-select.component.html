@@ -1,28 +1,15 @@
-<!-- <h2>List of Patients</h2>
-<div *ngIf="patients.length === 0">
-  No Patient found.
-</div>
-<ul *ngIf="patients.length > 0">
-  <li *ngFor="let patient of patients">
-    <button (click)="selectPatient(patient.id)">
-      {{ patient.name }}
-    </button>
-  </li>
-</ul> -->
-
 <h2>List of Patients</h2>
-
 <!-- Barra de búsqueda -->
 <div class="search-container">
-  <input type="text" class="search-bar" placeholder="Search for a patient">
+  <input type="text" class="search-bar" placeholder="Search for a patient" [(ngModel)]="searchTerm" (input)="filterPatients()">
 </div>
 
-<div *ngIf="patients.length === 0">
+<div class="not-found" *ngIf="filteredPatients.length === 0">
   No Patient found.
 </div>
 
-<div class="patient-card-container" *ngIf="patients.length > 0">
-  <article class="card" *ngFor="let patient of patients">
+<<div class="patient-card-container" *ngIf="filteredPatients.length > 0">
+  <article class="card" *ngFor="let patient of filteredPatients">
     <div class="card__content">
       <h2 class="card__title">{{ patient.name }}</h2>
       <p>Age: {{ patient.age }}</p>

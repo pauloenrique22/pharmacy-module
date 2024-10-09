@@ -6,6 +6,13 @@
     padding: 2rem;
 }
 
+.not-found {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 2rem;
+}
 .card {
     width: 18rem;
     border-radius: 1rem;

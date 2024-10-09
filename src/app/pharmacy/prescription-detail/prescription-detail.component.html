@@ -1,27 +1,6 @@
-<!--<h2>Prescription Details</h2>
-<div *ngIf="prescriptionDetails.length === 0">
-    No prescriptions Detaisl found for this Prescription.
-  </div>
-  <ul *ngIf="prescriptionDetails.length > 0">
-    <li *ngFor="let prescriptionsItem of prescriptionDetails">
-      <div>
-        <strong>Medication:</strong> {{ prescriptionsItem.medication }}
-      </div>
-      <div>
-        <strong>Dosage:</strong> {{ prescriptionsItem.dosage}} 
-      </div>
-      <div>
-        <strong>Frequency:</strong> {{ prescriptionsItem.frequency}} 
-      </div>
-      <br>
-    </li>
-  </ul>
--->
-  
-
 <h2 class="prescription-title">Prescription Details</h2>
 
-<div *ngIf="prescriptionDetails.length === 0">
+<div class="not-found" *ngIf="prescriptionDetails.length === 0">
     No prescriptions Details found for this Prescription.
 </div>
 
