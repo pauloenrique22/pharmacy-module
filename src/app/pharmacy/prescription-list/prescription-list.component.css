@@ -59,7 +59,12 @@
     font-size: 0.9rem;
   }
 
-  
+  .not-found {
+    text-align: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 2rem;
+}
 /* Estilo para el contenedor de la barra de búsqueda */
 .search-container {
     margin-bottom: 2rem; 

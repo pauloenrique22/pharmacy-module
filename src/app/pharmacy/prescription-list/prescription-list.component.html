@@ -1,40 +1,26 @@
-<!--<h2>Prescriptions</h2>
-<div *ngIf="prescriptions.length === 0">
-  No prescriptions found for this patient.
-</div>
-<ul *ngIf="prescriptions.length > 0">
-  <li *ngFor="let prescription of prescriptions">
-    <div>
-      <button (click)="viewPrescriptionDetails(prescription.id)">
-        Prescription: {{ prescription.doctor_id }}
-      </button> 
-    </div>
-    <div>
-      <strong>Date:</strong> {{ prescription.date_prescriptions }}
-    </div>
-    <div>
-      <strong>Doctor:</strong> {{ prescription.doctor?.name }} ({{ prescription.doctor?.specialty }})
-    </div>
-    <br>
-  </li>
-</ul>-->
-
-
 <h2 class="prescription-title">Prescriptions</h2>
-
-
-<!-- Barra de búsqueda -->
 <div class="search-container">
-  <input type="text" class="search-bar" placeholder="Search for a prescription">
+<div class="search-criteria">
+  <label>
+    <input type="radio" name="searchType" value="id" [(ngModel)]="searchType"> Search by ID
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="date" [(ngModel)]="searchType"> Search by Date
+  </label>
+  <label>
+    <input type="radio" name="searchType" value="doctorName" [(ngModel)]="searchType"> Search by Doctor Name
+  </label>
+</div>
+  <input type="text" class="search-bar" placeholder="Search for a prescription" [(ngModel)]="searchTerm" (input)="filterPrescriptions()">
 </div>
 
-<div *ngIf="prescriptions.length === 0">
+<div class="not-found" *ngIf="filteredPrescriptions.length === 0">
   No prescriptions found for this patient.
 </div>
 
 <!-- Contenedor de los Prescription  -->
-<div class="prescription-card-container" *ngIf="prescriptions.length > 0">
-  <div class="prescription-card" *ngFor="let prescription of prescriptions">
+<div class="prescription-card-container" *ngIf="filteredPrescriptions.length > 0">
+  <div class="prescription-card" *ngFor="let prescription of filteredPrescriptions">
     <div class="prescription-card__content">
       <button class="prescription-card__button" (click)="viewPrescriptionDetails(prescription.id)">
         View Prescription: {{ prescription.doctor_id }}

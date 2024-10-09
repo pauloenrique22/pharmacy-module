@@ -4,7 +4,7 @@
   <input type="text" class="search-bar" placeholder="Search for a patient" [(ngModel)]="searchTerm" (input)="filterPatients()">
 </div>
 
-<div class="no-patient" *ngIf="filteredPatients.length === 0">
+<div class="not-found" *ngIf="filteredPatients.length === 0">
   No Patient found.
 </div>
 
