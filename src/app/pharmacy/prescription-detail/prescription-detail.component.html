@@ -1,18 +1,25 @@
-<h2>Prescription Details</h2>
-<div *ngIf="prescriptionDetails.length === 0">
-    No prescriptions Detaisl found for this Prescription.
+<h2 class="prescription-title">Prescription Details</h2>
+
+<div class="not-found" *ngIf="prescriptionDetails.length === 0">
+    No prescriptions Details found for this Prescription.
+</div>
+
+<div class="prescription-card-container" *ngIf="prescriptionDetails.length > 0">
+  <div class="prescription-card" *ngFor="let prescriptionsItem of prescriptionDetails">
+    <div class="card__content">
+      <div class="detail-item">
+        <i class="fas fa-pills detail-icon"></i> 
+        <strong>Medication :  </strong> {{ prescriptionsItem.medication }}
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-prescription-bottle-alt detail-icon"></i> 
+        <strong>Dosage :  </strong> {{ prescriptionsItem.dosage }} 
+      </div>
+      <div class="detail-item">
+        <i class="fas fa-clock detail-icon"></i>
+        <strong>Frequency :  </strong> {{ prescriptionsItem.frequency }} 
+      </div>
+    </div>
   </div>
-  <ul *ngIf="prescriptionDetails.length > 0">
-    <li *ngFor="let prescriptionsItem of prescriptionDetails">
-      <div>
-        <strong>Medication:</strong> {{ prescriptionsItem.medication }}
-      </div>
-      <div>
-        <strong>Dosage:</strong> {{ prescriptionsItem.dosage}} 
-      </div>
-      <div>
-        <strong>Frequency:</strong> {{ prescriptionsItem.frequency}} 
-      </div>
-      <br>
-    </li>
-  </ul>
+</div>
+
