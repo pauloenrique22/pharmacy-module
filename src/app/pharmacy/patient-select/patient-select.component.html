@@ -8,7 +8,9 @@
   No Patient found.
 </div>
 
-<<div class="patient-card-container" *ngIf="filteredPatients.length > 0">
+<app-add-prescription></app-add-prescription>
+
+<div class="patient-card-container" *ngIf="filteredPatients.length > 0">
   <article class="card" *ngFor="let patient of filteredPatients">
     <div class="card__content">
       <h2 class="card__title">{{ patient.name }}</h2>

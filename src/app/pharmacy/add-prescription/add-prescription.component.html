@@ -1,0 +1,42 @@
+<div class="container-md prescription-form">
+  <h2>Add Prescription</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="patient_id">Select Patient:</label>
+      <select id="patient_id" [(ngModel)]="prescription.patient_id" name="patient_id" required class="form-select">
+        <option value="" default>Select a patient</option>
+        <option *ngFor="let patient of patients" [value]="patient.id">{{ patient.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="doctor_id">Select Doctor:</label>
+      <select id="doctor_id" [(ngModel)]="prescription.doctor_id" name="doctor_id" required class="form-select">
+        <option value="">Select a doctor</option>
+        <option *ngFor="let doctor of doctors" [value]="doctor.id">{{ doctor.name }}</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="date_prescriptions">Date of Prescription:</label>
+      <input type="date" [(ngModel)]="prescription.date_prescriptions" name="date_prescriptions" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="medication">Medication:</label>
+      <input type="text" [(ngModel)]="prescriptionDetail.medication" name="medication" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="dosage">Dosage:</label>
+      <input type="text" [(ngModel)]="prescriptionDetail.dosage" name="dosage" required class="form-control" />
+    </div>
+
+    <div class="form-group">
+      <label for="frequency">Frequency:</label>
+      <input type="text" [(ngModel)]="prescriptionDetail.frequency" name="frequency" required class="form-control" />
+    </div>
+
+    <button type="submit" class="btn-submit">Add Prescription</button>
+  </form>
+</div>
