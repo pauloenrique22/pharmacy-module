@@ -1157,6 +1157,12 @@
       "patient_id": "1",
       "doctor_id": "1",
       "date_prescriptions": "2024-10-22"
+    },
+    {
+      "id": 105,
+      "patient_id": "1",
+      "doctor_id": "4",
+      "date_prescriptions": "2024-10-29"
     }
   ],
   "prescription-details": [
@@ -2009,6 +2015,13 @@
       "medication": "Paracetamol",
       "dosage": "1gr",
       "frequency": "5 per day"
+    },
+    {
+      "id": 122,
+      "prescriptions_id": 105,
+      "medication": "Paracetamol",
+      "dosage": "5g",
+      "frequency": "1 a day"
     }
   ]
 }
